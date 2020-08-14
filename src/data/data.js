@@ -3,7 +3,7 @@ export const Header = {
   location: "Minsk (Belarus)",
   position: "Frontend Engineer, Senior JavaScript Developer",
   sex: "Male",
-  yob: 1983,
+  yob: "Oct 9, 1983",
   degree: "B.A."
 };
 
@@ -37,8 +37,6 @@ export const Experience = [
     id: 1,
     name: "TUT.BY",
     location: "Minsk, Belarus",
-    logo:
-      "https://media-exp1.licdn.com/dms/image/C4D0BAQFRhfUuQbh15Q/company-logo_100_100/0?e=1601510400&v=beta&t=WSDqWK8GhvyLdjr4FJ4FTJFDhWSuhkDwynDVj-rnJeM",
     position: "Front-end Engineer",
     start: "Dec 2013",
     end: "",
@@ -59,8 +57,6 @@ export const Experience = [
     id: 2,
     name: "Altoros",
     location: "Minsk, Belarus",
-    logo:
-      "https://media-exp1.licdn.com/dms/image/C4D0BAQHQNeZiFO0GQg/company-logo_100_100/0?e=1601510400&v=beta&t=sfggxMqdOMjQW25vfaR53G3qFwVB0KIj3ey99YZzyUw",
     position: "Front-end Engineer",
     start: "Feb 2012",
     end: "Nov 2013",
@@ -75,7 +71,6 @@ export const Experience = [
     id: 3,
     name:
       "Information Centre of the Ministry of Finance of the Republic of Belarus",
-    logo: "https://www.ivcmf.by/assets/templates/ivc/images/logo.jpg",
     position: "Software Engineer",
     location: "Minsk, Belarus",
     start: "Aug 2008",
@@ -83,7 +78,7 @@ export const Experience = [
     type: "Full-time",
     descriptionHeader:
       'The unitary enterprise "Information and Computing Center of the Ministry of Finance" has been providing services for automation, development and maintenance of software systems for more than 46 years',
-    description: `<p>I was developing new functions and was supporting the work of the software package for the <strong>Main Department of Insurance Supervision of the Ministry of Finance</strong>. I was also involved in the development of the ivcmf.by website and supported its operability. 
+    description: `<p>I was developing new functions and was supporting the work of the software package for the <strong>Main Department of Insurance Supervision of the Ministry of Finance</strong>. I was also involved in the development of the ivcmf.by website and support its operability. 
 Technologies: <strong>Delphi, MSSQL, HTML, CSS, PHP</strong></p>`
   }
 ];
@@ -92,8 +87,6 @@ export const Education = [
   {
     id: 1,
     name: "Polotsk State University",
-    logo:
-      "https://media-exp1.licdn.com/dms/image/C560BAQEH3nVQAcDzBA/company-logo_100_100/0?e=1601510400&v=beta&t=Il9L8n5Q58vww1rNj6K-4t4mP0zh85Pwb2TfzBrR9lc",
     position: "Bachelor of information technology",
     start: "2003",
     end: "2008",
@@ -101,15 +94,12 @@ export const Education = [
   }
 ];
 export const Skills = [
-  "HTML/HTML5",
-  "CSS/CSS3 (Passed LinkedIn Assessments)",
-  "JavaScript (Passed LinkedIn Assessments)",
-  "Vue.js",
-  "React.js (Passed LinkedIn Assessments)",
+  "Languages: <strong>English (B2)</strong>, EF SET English certificate <a href='efset.org/cert/E8BLq3'>efset.org/cert/E8BLq3</a>",
+  "HTML,CSS",
+  "JavaScript",
+  "Vue.js, React.js",
   "Front-end Development",
-  "CSS Animation",
-  "Node.js",
-  "REST"
+  "Node.js, REST"
 ];
 
 export const Certifications = [

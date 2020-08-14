@@ -34,7 +34,9 @@
             </p>
 
             <div class="break-words t-14 t-black item-description">
-              <p class="description-header">{{ item.descriptionHeader }}</p>
+              <p v-if="item.descriptionHeader != ''" class="description-header">
+                {{ item.descriptionHeader }}
+              </p>
               <div
                 class="description-content"
                 dir="ltr"
@@ -70,11 +72,15 @@ export default {
       );
       const years = Math.floor(duration / 12);
       const months = duration % 12;
-      //const duration = tsEnd - tsStart;
       let durationText = "";
       durationText +=
         years === 0 ? "" : `${years} ${years > 1 ? "years" : "year"}`;
-      durationText += months === 0 ? "" : ` and ${months} months`;
+
+      if (months > 0) {
+        durationText +=
+          years === 0 ? `${months} months` : ` and ${months} months`;
+      }
+
       return end === ""
         ? `${durationText} (${start} – Present)`
         : `${durationText} (${start} – ${end})`;

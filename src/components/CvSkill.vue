@@ -1,5 +1,5 @@
 <template>
-  <span class="cv-section-skill-section__skill">{{ skill }}</span>
+  <span class="cv-section-skill-section__skill" v-html="skill"></span>
 </template>
 
 <script>

@@ -36,6 +36,8 @@
 
 <script>
 import { Header } from "../data/data";
+import moment from "moment";
+
 export default {
   name: "CvHeader",
 
@@ -46,7 +48,13 @@ export default {
   },
   computed: {
     age() {
-      return `${new Date().getFullYear() - this.data.yob} years old`;
+      const tsStart = Date.parse(this.data.yob);
+      const tsEnd = Date.now();
+      const duration = Math.ceil(
+        moment.duration((tsEnd - tsStart) / 1000, "seconds").years()
+      );
+
+      return `${duration} years old`;
     }
   },
   mounted() {
