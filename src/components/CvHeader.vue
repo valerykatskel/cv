@@ -7,7 +7,7 @@
         <h4>{{ age }}, {{ data.location }}</h4>
 
         <ul class="cv-contact-info">
-          <li><span class="name">E-mail:</span>ne.vse.srazu@gmail.com</li>
+          <li><span class="name">E-mail:</span>valery.katskel@gmail.com</li>
           <li><span class="name">Skype:</span>bestnickname</li>
           <li>
             <span class="name">Phone/WhatsApp/Telegram/Viber:</span>+375 29 768
