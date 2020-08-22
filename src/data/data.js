@@ -13,14 +13,16 @@ export const Summary = {
 
 export const Contact = [
   {
-    icon: "",
-    key: "phone",
+    key: "E-mail:",
+    value: "valerykatskel@gmail.com"
+  },
+  {
+    key: "Phone/WhatsApp/Telegram/Viber",
     value: "+375297688632"
   },
   {
-    icon: "",
-    key: "mail",
-    value: "val.katskel@yandex.by"
+    key: "Skype:",
+    value: "bestnickname"
   }
 ];
 
