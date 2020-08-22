@@ -94,7 +94,7 @@ export const Education = [
   }
 ];
 export const Skills = [
-  "Languages: <strong>English (B2)</strong>, EF SET English certificate <a href='efset.org/cert/E8BLq3'>efset.org/cert/E8BLq3</a>",
+  "Languages: <strong>English (B2)</strong>, EF SET English certificate <a href='https://www.efset.org/cert/E8BLq3'>https://efset.org/cert/E8BLq3</a>",
   "HTML,CSS",
   "JavaScript",
   "Vue.js, React.js",
