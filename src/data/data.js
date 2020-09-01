@@ -1,7 +1,7 @@
 export const Header = {
   name: "Valery Katskel",
   location: "Minsk (Belarus)",
-  position: "Frontend Engineer, Senior JavaScript Developer",
+  position: "Front-end Engineer, Senior JavaScript Developer",
   sex: "Male",
   yob: "Oct 9, 1983",
   degree: "B.A."
@@ -27,7 +27,7 @@ export const Contact = [
 ];
 
 export const Achievements = [
-  "<strong>12+ years</strong> experience in IT and <strong>over 8 years</strong> commercial development in Frontend",
+  "<strong>12+ years</strong> experience in IT and <strong>over 8 years</strong> commercial development in Front-end",
   "<strong>over 250</strong> custom branding pages created since 2013 at TUT.BY",
   "implementation of a new type of advertising banner made it possible to increase the influx of new advertisers to the TUT.BY by <strong>15% in 3 months</strong>",
   "experience in developing high-load applications with a peak load of more than <strong>3000 requests per minute</strong>",
@@ -47,13 +47,13 @@ export const Experience = [
       "TUT.BY group of companies (from 2000 to the present), ≈300 employees, regional offices in all regions of Belarus. Reporting directly to the Chief Engineer, member of the Board of Directors of the company.",
     description: `<p>My responsibilities:</p>
 <ul>
-<li>developing of new sections on the portal</li>
-<li>updating existing ones</li>
-<li>refactoring legacy code</li>
-<li>development of various interactive applications and widgets for embedding into the news page</li>
+<li>development (HTML + JavaScript) of new blocks, sections, and pages for web portal</li>
+<li>updating, editing and adding new functionality</li>
+<li>refactoring of legacy code</li>
+<li>development of various interactive applications and widgets for embedding in a news page (voting, step-by-step quizzes, interactive forms)</li>
 </ul>
 <p>There is a large number of successfully completed <strong>interactive games and quizzes</strong>, affiliate materials.</p>
-<p>In my work, I use the following technologies: <strong>Less, Html, Pug, Vue.js, JavaScript</strong>.</p>`
+<p>In my work, I use <strong>HTML</strong> and <strong>Pug</strong> for markup, <strong>Less</strong> for writing styles. I use <strong>Vue.js</strong> as the main framework for developing various applications. I use also native <strong>JavaScript</strong> and <strong>jQuery</strong> for developing functionality in places where <strong>Vue.js</strong> can not be used.</p>`
   },
   {
     id: 2,
@@ -65,9 +65,16 @@ export const Experience = [
     type: "Full-time",
     descriptionHeader:
       "Altoros is a leading IT services provider that helped 50+ Global 2000 organizations, ≈350 employees, 5 global offices, reported to Front-end Resource Manager",
-    description: `<p>For a short period of work in the company, I took part as a Frontend developer in <strong>5 projects</strong>.</p>
-<p>These were projects for customers from various countries, such as <strong>Norway and USA</strong>. These were very versatile projects: from a web application for determining possible breast cancer for women, to a social network for people with creative professions (musicians, artists, singers) and service for booking the appointment time with a veterinarian.</p>
-<p>The technologies I had Used: <strong>CoffeeScript, JavaScript, Haml, Sass, Scss, Backbone.js, Apache Cordova</strong><p>`
+    description: `<p>During a short period of work in the company, I took part in <strong>5 projects</strong> as a Front-end developer.</p>
+<p>These were projects for customers from different countries, such as <strong>Norway</strong>, <strong>the USA</strong>, etc. The subjects of the projects were extremely versatile: from a web application for determining possible breast cancer in women to a social network for people of creative professions (musicians, artists, singers) and services to make an appointment with the veterinarian.</p>
+<p>My responsibilities:</p>
+<ul>
+<li>development of page layouts according to the finished design (<strong>Photoshop</strong>, <strong>Sketch</strong>)</li>
+<li>development of application functionality using the <strong>MVC</strong> paradigm and using <strong>backbone.js</strong> as the main JavaScript library</li>
+<li>work with <strong>RESTful JSON</strong></li>
+<li>development of functionality for applications using <strong>CoffeeScript</strong></li>
+</ul>
+<p>Technologies that I used: CoffeeScript and JavaScript for writing the main functionality of projects, <strong>Haml</strong> for markup, <strong>SASS</strong>, and <strong>SCSS</strong> for writing styles. I also had experience using frameworks and libraries such as Backbone.js and Apache Cordova.</p>`
   },
   {
     id: 3,
@@ -80,8 +87,14 @@ export const Experience = [
     type: "Full-time",
     descriptionHeader:
       'The unitary enterprise "Information and Computing Center of the Ministry of Finance" has been providing services for automation, development and maintenance of software systems for more than 46 years',
-    description: `<p>I was developing new functions and was supporting the work of the software package for the <strong>Main Department of Insurance Supervision of the Ministry of Finance</strong>. I was also involved in the development of the ivcmf.by website and support its operability. 
-Technologies: <strong>Delphi, MSSQL, HTML, CSS, PHP</strong></p>`
+    description: `<p>My responsibilities included:</p>
+    
+<ul>
+<li>development and support of the website www.ivcmf.by</li>
+<li>development of custom modules for a website (running on <strong>MODx CMS</strong>) using <strong>PHP</strong>, <strong>JavaScript</strong>, <strong>CSS</strong> (checking client licenses, receiving software updates)</li>
+<li>support and development of new functions for generating reports of insurance companies of the Republic of Belarus for delivery to the Ministry of Finance in the form of Excel files</li>
+<li>writing <strong>SQL</strong> queries and working with <strong>MSSQL</strong></li>
+</ul>`
   }
 ];
 
@@ -98,10 +111,10 @@ export const Education = [
 export const Skills = [
   "Languages: <strong>English (B2)</strong>, EF SET English certificate <a href='https://www.efset.org/cert/E8BLq3'>https://efset.org/cert/E8BLq3</a>",
   "HTML,CSS",
-  "JavaScript",
-  "Vue.js, React.js",
-  "Front-end Development",
-  "Node.js, REST"
+  "JavaScript (ES6+)",
+  "Vue.js, Vuex, Nuxt.js",
+  "React.js, Next.js",
+  "Node.js, REST, MongoDB"
 ];
 
 export const Certifications = [
@@ -379,7 +392,7 @@ export const Certifications = [
     id: 31,
     img:
       "https://media-exp1.licdn.com/dms/image/C4D0BAQGyOWvr4W0Pow/company-logo_100_100/0?e=1601510400&v=beta&t=q6BmTUrPzrNdHaXnFWIYLZRz7tC3ji_UxUXZNTks_u8",
-    name: "Succeeding in Web Development: Full Stack and Front End",
+    name: "Succeeding in Web Development: Full Stack and Front-end",
     company: "LinkedIn",
     issued: "Jan 2020",
     description: "Credential ID AcbYOEhbGGg62xEJSDCQ2_aGJjeR"
@@ -469,7 +482,7 @@ export const Certifications = [
     id: 41,
     img:
       "https://media-exp1.licdn.com/dms/image/C4D0BAQGyOWvr4W0Pow/company-logo_100_100/0?e=1601510400&v=beta&t=q6BmTUrPzrNdHaXnFWIYLZRz7tC3ji_UxUXZNTks_u8",
-    name: "Become a Front-End Web Developer",
+    name: "Become a Front-end Web Developer",
     company: "LinkedIn",
     issued: "Jan 2020",
     description: "Credential ID AULAMH3ODlKiinYPJge5PqLcMwW4"
@@ -720,7 +733,7 @@ export const Projects = [
     name: "Nekos, the Advertising agency",
     start: "Jan 2013",
     end: "Jun 2013",
-    description: `While working on this project, I served as a full-stack developer. Frontend (HTML layout + jQuery) Backend (MODx, MySQL database)`,
+    description: `While working on this project, I served as a full-stack developer. Front-end (HTML layout + jQuery) Backend (MODx, MySQL database)`,
     url: "http://nekos.ru/"
   },
   {

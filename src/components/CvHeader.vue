@@ -10,8 +10,8 @@
           <li><span class="name">E-mail:</span>valery.katskel@gmail.com</li>
           <li><span class="name">Skype:</span>bestnickname</li>
           <li>
-            <span class="name">Phone/WhatsApp/Telegram/Viber:</span>+375 29 768
-            86 32
+            <span class="name">Phone/WhatsApp/Telegram/Viber:</span
+            >+375297688632
           </li>
           <li>
             <span class="name">Linkedin:</span>
