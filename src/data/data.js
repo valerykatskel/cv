@@ -79,7 +79,7 @@ export const Experience = [
   {
     id: 3,
     name:
-      "Information Centre of the Ministry of Finance of the Republic of Belarus",
+      "Information Center of the Ministry of Finance of the Republic of Belarus",
     position: "Software Engineer",
     location: "Minsk, Belarus",
     start: "Aug 2008",
