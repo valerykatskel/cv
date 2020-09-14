@@ -46,7 +46,7 @@
       </ul>
     </div>-->
     <!-- CV Licenses & Certifications section end -->
-    <div class="cv-section disclamer-section">
+    <div v-if="CVForPoland" class="cv-section disclamer-section">
       <p>
         „Na podstawie Rozporządzenia Parlamentu Europejskiego i Rady (UE)
         2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w
@@ -90,6 +90,7 @@ export default {
   },
   data() {
     return {
+      CVForPoland: false,
       projects: [],
       skills: [],
       experience: [],
