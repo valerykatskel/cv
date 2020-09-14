@@ -164,7 +164,7 @@ a[href] {
 }
 .container-with-shadow {
   border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
 }
 @media screen and (-ms-high-contrast: active) {
   .container-with-shadow {

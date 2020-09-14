@@ -27,7 +27,7 @@ export const Contact = [
 ];
 
 export const Achievements = [
-  "<strong>12+ years</strong> experience in IT and <strong>over 8 years</strong> commercial development in Front-end",
+  "<strong>12+ years</strong> experience in IT and <strong>over 8 years</strong> of commercial development in Front-end",
   "<strong>over 250</strong> custom branding pages created since 2013 at TUT.BY",
   "implementation of a new type of advertising banner made it possible to increase the influx of new advertisers to the TUT.BY by <strong>15% in 3 months</strong>",
   "experience in developing high-load applications with a peak load of more than <strong>3000 requests per minute</strong>",
@@ -48,11 +48,11 @@ export const Experience = [
     description: `<p>My responsibilities:</p>
 <ul>
 <li>development (HTML + JavaScript) of new blocks, sections, and pages for web portal</li>
-<li>updating, editing and adding new functionality</li>
+<li>updating, editing, and adding new functionality</li>
 <li>refactoring of legacy code</li>
 <li>development of various interactive applications and widgets for embedding in a news page (voting, step-by-step quizzes, interactive forms)</li>
 </ul>
-<p>There is a large number of successfully completed <strong>interactive games and quizzes</strong>, affiliate materials.</p>
+<p>There is a large number of completed <strong>interactive games and quizzes</strong>, affiliate materials.</p>
 <p>In my work, I use <strong>HTML</strong> and <strong>Pug</strong> for markup, <strong>Less</strong> for writing styles. I use <strong>Vue.js</strong> as the main framework for developing various applications. I use also native <strong>JavaScript</strong> and <strong>jQuery</strong> for developing functionality in places where <strong>Vue.js</strong> can not be used.</p>`
   },
   {
@@ -64,7 +64,7 @@ export const Experience = [
     end: "Nov 2013",
     type: "Full-time",
     descriptionHeader:
-      "Altoros is a leading IT services provider that helped 50+ Global 2000 organizations, ≈350 employees, 5 global offices, reported to Front-end Resource Manager",
+      "Altoros is a leading IT services provider that helped 50+ Global 2000 organizations, ≈350 employees, 5 global offices. I've reported to Front-end Resource Manager",
     description: `<p>During a short period of work in the company, I took part in <strong>5 projects</strong> as a Front-end developer.</p>
 <p>These were projects for customers from different countries, such as <strong>Norway</strong>, <strong>the USA</strong>, etc. The subjects of the projects were extremely versatile: from a web application for determining possible breast cancer in women to a social network for people of creative professions (musicians, artists, singers) and services to make an appointment with the veterinarian.</p>
 <p>My responsibilities:</p>
@@ -86,7 +86,7 @@ export const Experience = [
     end: "Jan 2012",
     type: "Full-time",
     descriptionHeader:
-      'The unitary enterprise "Information and Computing Center of the Ministry of Finance" has been providing services for automation, development and maintenance of software systems for more than 46 years',
+      'The unitary enterprise "Information and Computing Center of the Ministry of Finance" has been providing services for automation, development, and maintenance of software systems for more than 46 years',
     description: `<p>My responsibilities included:</p>
     
 <ul>
@@ -110,10 +110,7 @@ export const Education = [
 ];
 export const Skills = [
   "Languages: <strong>English (B2)</strong>, EF SET English certificate <a href='https://www.efset.org/cert/E8BLq3'>https://efset.org/cert/E8BLq3</a>",
-  "HTML,CSS",
-  "JavaScript (ES6+)",
-  "Vue.js, Vuex, Nuxt.js",
-  "React.js, Next.js",
+  "JavaScript (ES6+), Vue.js (Vuex, Nuxt.js), React.js (Next.js)",
   "Node.js, REST, MongoDB"
 ];
 

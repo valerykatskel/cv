@@ -46,6 +46,25 @@
       </ul>
     </div>-->
     <!-- CV Licenses & Certifications section end -->
+    <div class="cv-section disclamer-section">
+      <p>
+        „Na podstawie Rozporządzenia Parlamentu Europejskiego i Rady (UE)
+        2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w
+        związku z przetwarzaniem danych osobowych i w sprawie swobodnego
+        przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne
+        rozporządzenie o ochronie danych, tzw. RODO) (Dz.U.UE L z dnia 4 maja
+        2016 r.) wyrażam zgodę na przetwarzanie przez GFT Poland sp. z o.o. z
+        siedzibą w Łodzi (90-118 Łódź, ul. Kilińskiego 66) udostępnionych przeze
+        mnie moich danych osobowych
+      </p>
+      <p>
+        a) w celu prowadzenia rekrutacji na stanowisko wskazane w ogłoszeniu
+      </p>
+      <p>
+        b) w celach związanych z organizowanymi w przyszłości procesami
+        rekrutacji.”
+      </p>
+    </div>
   </div>
 </template>
 
@@ -115,6 +134,22 @@ export default {
       li {
         font-size: 14px;
         line-height: 23px;
+      }
+    }
+  }
+
+  &.disclamer-section {
+    padding-top: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-top: -30px;
+    background: #fff;
+    p {
+      font-size: 10px;
+      color: grey;
+      margin-top: 5px;
+      &:first-child {
+        margin-top: 0;
       }
     }
   }
