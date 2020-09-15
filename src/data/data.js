@@ -98,6 +98,16 @@ export const Experience = [
   }
 ];
 
+export const CoverLetter = `
+<p>Dear Hiring Manager,</p>
+<p>I would like to express my interest in the Front End Engineer position. I am a self-motivated and progress-driven Front End Engineer with an extensive background in this industry. With a long-standing record of initiative and innovation, I have developed and executed strategies that I believe will bring value to Checkout.com. </p>
+<p>Throughout the course of my career, I have honed my abilities in compliance and quality control. I am an astute problem-solver capable of prioritizing and managing complex projects with proficiency.</p>
+<p>In my previous role, I exercised skills in motivation, problem-solving and process development and consistently contributed to team efforts and organizational improvements. I am open-minded and focused on new developments in my field. I have proven to be effective and motivational, with proficiency in teamwork and collaborative work. I enjoy brainstorming and coordinating efforts to achieve a common goal.</p>
+<p>Please take a moment to review my enclosed resume and accompanying credentials. I would appreciate the opportunity to speak with you regarding my candidacy for the Front End Engineer role. I am looking forward to your response and thank you for your consideration.</p>
+<p>Sincerely,
+Valery Katskel</p>
+`;
+
 export const Education = [
   {
     id: 1,
