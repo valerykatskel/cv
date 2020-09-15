@@ -2,9 +2,11 @@
   <div class="cv-section cv-header">
     <div class="cv-section-inner">
       <div class="header-left">
-        <h2>{{ data.name }}</h2>
-        <h3>{{ data.position }}</h3>
-        <h4>{{ age }}, {{ data.location }}</h4>
+        <div class="cv-personal-information">
+          <h2>{{ data.name }}</h2>
+          <h3>{{ data.position }}</h3>
+          <h4>{{ age }}, {{ data.location }}</h4>
+        </div>
 
         <ul class="cv-contact-info">
           <li><span class="name">E-mail:</span>valery.katskel@gmail.com</li>
@@ -95,7 +97,11 @@ h2 {
       margin-top: 5px;
     }
   }
-
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .header-right {
     img {
       height: 200px;
@@ -116,5 +122,7 @@ h2 {
       width: 280px;
     }
   }
+}
+.cv-personal-information {
 }
 </style>
