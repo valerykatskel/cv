@@ -1,14 +1,14 @@
 export const Header = {
   name: "Valery Katskel",
   location: "Minsk (Belarus)",
-  position: "Front-end Engineer, Senior JavaScript Developer",
+  position: "Frontend Engineer, Senior JavaScript Developer",
   sex: "Male",
   yob: "Oct 9, 1983",
   degree: "B.A."
 };
 
 export const Summary = {
-  text: `I worked as a Front-end Engineer on scalable international projects. I have experience writing applications on Vue.js using various related technologies, such as Vuex, Vuetify, Nuxt and etc. `
+  text: `I worked as a Frontend Engineer on scalable international projects. I have experience writing applications on Vue.js using various related technologies, such as Vuex, Vuetify, Nuxt and etc. `
 };
 
 export const Contact = [
@@ -27,7 +27,7 @@ export const Contact = [
 ];
 
 export const Achievements = [
-  "<strong>12+ years</strong> experience in IT and <strong>over 8 years</strong> of commercial development in Front-end",
+  "<strong>12+ years</strong> experience in IT and <strong>over 8 years</strong> of commercial development in Frontend",
   "<strong>over 250</strong> custom branding pages created since 2013 at TUT.BY",
   "implementation of a new type of advertising banner made it possible to increase the influx of new advertisers to the TUT.BY by <strong>15% in 3 months</strong>",
   "experience in developing high-load applications with a peak load of more than <strong>3000 requests per minute</strong>",
@@ -37,11 +37,32 @@ export const Achievements = [
 export const Experience = [
   {
     id: 1,
+    name: "Social Discovery Ventures",
+    location: "Minsk, Belarus",
+    position: "Senior Frontend Engineer",
+    start: "Nov 2020",
+    end: "",
+    type: "Full-time",
+    descriptionHeader:
+      "Social Discovery Ventures is a collection of unique online brands which enable people around the globe to discover each other through the power of shared interests and mutual benefit.",
+    description: `<p>My responsibilities:</p>
+<ul>
+<li>maintain the legacy JavaScript code (Require.js, AMD modules and etc.)</li>
+<li>moving logic and functionality from AMD modules to React and ES6 modules</li>
+<li>refactoring, updating, and creating new functionality for products (anastasiadate.com, asiandate.com and etc.)</li>
+<li>implementation of technical specifications</li>
+<li>bug fixing</li>
+<li>optimization of the code of the existing functionality</li>
+</ul>
+<p>In my work, I use <strong>HTML</strong> for markup, <strong>Less</strong> for writing styles. As a backend part, we're using .Net. The frontend is writing on React (new projects) and on a native Java Script (AMD modules, Require.js).</p>`
+  },
+  {
+    id: 2,
     name: "TUT.BY",
     location: "Minsk, Belarus",
-    position: "Front-end Engineer",
+    position: "Frontend Developer",
     start: "Dec 2013",
-    end: "",
+    end: "Nov 2020",
     type: "Full-time",
     descriptionHeader:
       "TUT.BY group of companies (from 2000 to the present), ≈300 employees, regional offices in all regions of Belarus. Reporting directly to the Chief Engineer, member of the Board of Directors of the company.",
@@ -56,16 +77,16 @@ export const Experience = [
 <p>In my work, I use <strong>HTML</strong> and <strong>Pug</strong> for markup, <strong>Less</strong> for writing styles. I use <strong>Vue.js</strong> as the main framework for developing various applications. I use also native <strong>JavaScript</strong> and <strong>jQuery</strong> for developing functionality in places where <strong>Vue.js</strong> can not be used.</p>`
   },
   {
-    id: 2,
-    name: "Altoros",
+    id: 3,
+    name: "Altoros Development",
     location: "Minsk, Belarus",
-    position: "Front-end Engineer",
+    position: "Frontend Developer",
     start: "Feb 2012",
     end: "Nov 2013",
     type: "Full-time",
     descriptionHeader:
-      "Altoros is a leading IT services provider that helped 50+ Global 2000 organizations, ≈350 employees, 5 global offices. I've reported to Front-end Resource Manager",
-    description: `<p>During a short period of work in the company, I took part in <strong>5 projects</strong> as a Front-end developer.</p>
+      "Altoros is a leading IT services provider that helped 50+ Global 2000 organizations, ≈350 employees, 5 global offices. I've reported to Frontend Resource Manager",
+    description: `<p>During a short period of work in the company, I took part in <strong>5 projects</strong> as a Frontend developer.</p>
 <p>These were projects for customers from different countries, such as <strong>Norway</strong>, <strong>the USA</strong>, etc. The subjects of the projects were extremely versatile: from a web application for determining possible breast cancer in women to a social network for people of creative professions (musicians, artists, singers) and services to make an appointment with the veterinarian.</p>
 <p>My responsibilities:</p>
 <ul>
@@ -77,7 +98,7 @@ export const Experience = [
 <p>Technologies that I used: CoffeeScript and JavaScript for writing the main functionality of projects, <strong>Haml</strong> for markup, <strong>SASS</strong>, and <strong>SCSS</strong> for writing styles. I also had experience using frameworks and libraries such as Backbone.js and Apache Cordova.</p>`
   },
   {
-    id: 3,
+    id: 4,
     name:
       "Information Center of the Ministry of Finance of the Republic of Belarus",
     position: "Software Engineer",
@@ -120,7 +141,7 @@ export const Education = [
 ];
 export const Skills = [
   "Languages: <strong>English (B2)</strong>, EF SET English certificate <a href='https://www.efset.org/cert/E8BLq3'>https://efset.org/cert/E8BLq3</a>",
-  "JavaScript (ES6+), Vue.js (Vuex, Nuxt.js), React.js (Next.js)",
+  "JavaScript (ES6+), Vue.js (Vuex, Nuxt.js), React.js (Next.js), AMD, Require.js",
   "Node.js, REST, MongoDB"
 ];
 
@@ -399,7 +420,7 @@ export const Certifications = [
     id: 31,
     img:
       "https://media-exp1.licdn.com/dms/image/C4D0BAQGyOWvr4W0Pow/company-logo_100_100/0?e=1601510400&v=beta&t=q6BmTUrPzrNdHaXnFWIYLZRz7tC3ji_UxUXZNTks_u8",
-    name: "Succeeding in Web Development: Full Stack and Front-end",
+    name: "Succeeding in Web Development: Full Stack and Frontend",
     company: "LinkedIn",
     issued: "Jan 2020",
     description: "Credential ID AcbYOEhbGGg62xEJSDCQ2_aGJjeR"
@@ -489,7 +510,7 @@ export const Certifications = [
     id: 41,
     img:
       "https://media-exp1.licdn.com/dms/image/C4D0BAQGyOWvr4W0Pow/company-logo_100_100/0?e=1601510400&v=beta&t=q6BmTUrPzrNdHaXnFWIYLZRz7tC3ji_UxUXZNTks_u8",
-    name: "Become a Front-end Web Developer",
+    name: "Become a Frontend Web Developer",
     company: "LinkedIn",
     issued: "Jan 2020",
     description: "Credential ID AULAMH3ODlKiinYPJge5PqLcMwW4"
@@ -740,7 +761,7 @@ export const Projects = [
     name: "Nekos, the Advertising agency",
     start: "Jan 2013",
     end: "Jun 2013",
-    description: `While working on this project, I served as a full-stack developer. Front-end (HTML layout + jQuery) Backend (MODx, MySQL database)`,
+    description: `While working on this project, I served as a full-stack developer. Frontend (HTML layout + jQuery) Backend (MODx, MySQL database)`,
     url: "http://nekos.ru/"
   },
   {
