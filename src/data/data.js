@@ -48,13 +48,13 @@ export const Experience = [
     description: `<p>My responsibilities:</p>
 <ul>
 <li>maintain the legacy JavaScript code (Require.js, AMD modules and etc.)</li>
-<li>moving logic and functionality from AMD modules to React and ES6 modules</li>
+<li>moving logic and functionality from AMD modules to ES6 modules</li>
 <li>refactoring, updating, and creating new functionality for products (anastasiadate.com, asiandate.com and etc.)</li>
 <li>implementation of technical specifications</li>
 <li>bug fixing</li>
 <li>optimization of the code of the existing functionality</li>
 </ul>
-<p>In my work, I use <strong>HTML</strong> for markup, <strong>Less</strong> for writing styles. As a backend part, we're using .Net. The frontend is writing on React (new projects) and on a native Java Script (AMD modules, Require.js).</p>`,
+<p>In my work, I use <strong>HTML</strong> for markup, <strong>Less</strong> for writing styles. As a backend part, we're using .Net. The frontend is writing on React (new projects) and on a native Java Script (AMD modules, Require.js). We use WebRTC in our products for chats.</p>`,
   },
   {
     id: 2,
@@ -141,7 +141,7 @@ export const Education = [
 ];
 export const Skills = [
   "Languages: <strong>English (B2)</strong>, EF SET English certificate <a href='https://www.efset.org/cert/E8BLq3'>https://efset.org/cert/E8BLq3</a>",
-  "JavaScript (ES6+), Vue.js (Vuex, Nuxt.js), React.js (Next.js), AMD, Require.js",
+  "JavaScript (ES6+), Vue.js (Vuex, Nuxt.js), React.js (Next.js), AMD, CommonJS, Require.js, WebRTC, WebSockets",
   "Node.js, REST, MongoDB",
 ];
 
@@ -795,7 +795,7 @@ export const Projects = [
     start: "Feb 2010",
     end: "Jan 2011",
     description: `This is one of my first projects. It was an April of 2010... It was an IE6's time... It was full of energy and it was necessary to take into account his wishes like as PNG, max-width and more and more... Nowadays this company and its websites are no longer alive. I deployed a backup (the latest version that I had) to show the work that I did. This is ONLY DEMO, NOT REAL SERVICE. You can see source form HTML markup on my github pages`,
-    url: "https://github.com/valerykatskel/valprojects.aval",
+    url: "https://valerykatskel.github.io/valprojects.aval/",
   },
   {
     id: "15",
