@@ -15,12 +15,7 @@
             <span class="name">Phone/WhatsApp/Telegram/Viber:</span
             >+375297688632
           </li>
-          <li>
-            <span class="name">Linkedin:</span>
-            <a href="https://www.linkedin.com/in/valerykatskel/"
-              >linkedin.com/in/valerykatskel</a
-            >
-          </li>
+
           <li>
             <span class="name">GitHub:</span>
             <a href="https://github.com/valerykatskel"
@@ -45,7 +40,7 @@ export default {
 
   data() {
     return {
-      data: {}
+      data: {},
     };
   },
   computed: {
@@ -57,13 +52,13 @@ export default {
       );
 
       return `${duration} years old`;
-    }
+    },
   },
   mounted() {
     this.$nextTick(() => {
       this.data = { ...Header };
     });
-  }
+  },
 };
 </script>
 

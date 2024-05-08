@@ -1,7 +1,7 @@
 export const Header = {
   name: "Valery Katskel",
   location: "Minsk (Belarus)",
-  position: "Frontend Engineer, Senior JavaScript Developer",
+  position: "Frontend Team Lead",
   sex: "Male",
   yob: "Oct 9, 1983",
   degree: "B.A.",
@@ -27,37 +27,78 @@ export const Contact = [
 ];
 
 export const Achievements = [
-  "<strong>12+ years</strong> experience in IT and <strong>over 8 years</strong> of commercial development in Frontend",
-  "<strong>over 250</strong> custom branding pages created since 2013 at TUT.BY",
-  "implementation of a new type of advertising banner made it possible to increase the influx of new advertisers to the TUT.BY by <strong>15% in 3 months</strong>",
+  "<strong>16+ years</strong> experience in IT and <strong>over 12 years</strong> of commercial development in Frontend",
   "experience in developing high-load applications with a peak load of more than <strong>3000 requests per minute</strong>",
-  "work for the <strong>last 6.5 years</strong> on the largest web portal of the Republic of Belarus with <strong>more than 20,000,000</strong> unique visitors per month",
+  "a project on native JavaScript (<i>Require.js, jQuery</i>) was rewritten to React (<i>Redux Toolkit, Styled Components, TypeScript, react-i18next</i>), which allowed for predictable project enhancements estimation and reduced the time spent on fixes <strong>by 50%</strong>",
+  "a tightly coupled project (<i>.NET6 + jQuery + native JavaScript</i>) was split into separate frontend and backend, updating the tech stack to React ecosystem and switching to REST, which <strong>increased</strong> the speed of both backend and frontend teams <strong>by 25%</strong> due to the elimination of unnecessary dependencies",
+  "analysis of existing React dashboards for managing JAVA services and extracting common components into a separate npm library, which accelerated the development time of typical company dashboards by <strong>10%</strong> and reduced the amount of duplicative code by reusing common components",
 ];
 
 export const Experience = [
   {
     id: 1,
+    name: "iFuture",
+    location: "Minsk, Belarus",
+    position: "Frontend Team Lead",
+    start: "May 2023",
+    end: "April 2024",
+    type: "Full-time",
+    descriptionHeader:
+      "The company iFuture was founded by professionals with many years of experience in the field of information technology.",
+    description: `<p>My responsibilities:</p>
+    <ul>
+      <li>mentoring new employees and conducting regular meetings throughout their adaptation period</li>
+      <li>creating a competency matrix to assess the strengths and weaknesses within the team</li>
+      <li>reviewing the team's commits to ensure code quality and consistency</li>
+      <li>analyzing the existing codebase to identify redundant components and code, and encapsulating them into an npm library for efficient reuse in development</li>
+      <li>conducting personalized 1-to-1 meetings with team members to discuss progress and address concerns</li>
+    </ul>
+    <p>I employ React as the primary library for UI rendering, complemented by Material UI for the component suite. Artifactory serves as our local repository for npm packages and build artifacts. Additionally, Atlassian Bamboo is utilized for constructing projects, formulating build plans, and orchestrating deployment strategies.</p>`,
+  },
+  {
+    id: 2,
     name: "Social Discovery Ventures",
     location: "Minsk, Belarus",
-    position: "Senior Frontend Engineer",
-    start: "Nov 2020",
-    end: "",
+    position: "Frontend Team Lead",
+    start: "May 2022",
+    end: "May 2023",
     type: "Full-time",
     descriptionHeader:
       "Social Discovery Ventures is a collection of unique online brands which enable people around the globe to discover each other through the power of shared interests and mutual benefit.",
     description: `<p>My responsibilities:</p>
-<ul>
-<li>maintain the legacy JavaScript code (Require.js, AMD modules and etc.)</li>
-<li>moving logic and functionality from AMD modules to ES6 modules</li>
-<li>refactoring, updating, and creating new functionality for products (anastasiadate.com, asiandate.com and etc.)</li>
-<li>implementation of technical specifications</li>
-<li>bug fixing</li>
-<li>optimization of the code of the existing functionality</li>
-</ul>
-<p>In my work, I use <strong>HTML</strong> for markup, <strong>Less</strong> for writing styles. As a backend part, we're using .Net. The frontend is writing on React (new projects) and on a native Java Script (AMD modules, Require.js). We use WebRTC in our products for chats.</p>`,
+    <ul>
+    <li>conducting regular personalized 1-to-1 meetings with team members to foster professional growth and address individual concerns</li>
+    <li>mentoring new employees, guiding them through their initial experience and integration into the team</li>
+    <li>performing thorough code reviews of merge requests submitted by the team to ensure adherence to coding standards and best practices</li>
+    <li>making key architectural and technological decisions within the team during project development phases</li>
+    <li>breaking down complex technical tasks into manageable subtasks and accurately estimating timelines and resources required</li>
+    <li>strategically planning the roadmap for technological stack updates to enhance development efficiency and product scalability</li>
+    </ul>
+    <p>I employ React as the primary library for developing applications, leveraging various elements of the React ecosystem such as Redux Toolkit for predictable state management, and asyncThunk for handling diverse asynchronous operations that integrate results into the state. Following a technology stack upgrade, we transitioned to utilizing Websockets for chat functionalities, with backend implementations powered by SignalR for .Net.</p>`,
   },
   {
-    id: 2,
+    id: 3,
+    name: "Social Discovery Ventures",
+    location: "Minsk, Belarus",
+    position: "Senior Frontend Engineer",
+    start: "Nov 2020",
+    end: "May 2022",
+    type: "Full-time",
+    descriptionHeader:
+      "Social Discovery Ventures is a collection of unique online brands which enable people around the globe to discover each other through the power of shared interests and mutual benefit.",
+    description: `<p>My responsibilities:</p>
+    <ul>
+      <li>maintaining legacy JavaScript code, including Require.js and AMD modules</li>
+      <li>transitioning logic and functionality from AMD modules to ES6 modules</li>
+      <li>refactoring, updating, and developing new functionalities for products such as anastasiadate.com and asiandate.com</li>
+      <li>implementing technical specifications to enhance product features</li>
+      <li>diagnosing and resolving bugs to improve system stability</li>
+      <li>optimizing existing code to enhance performance and maintainability</li>
+    </ul>
+    <p>In my professional capacity, I utilize <strong>HTML</strong> for markup and <strong>Less</strong> for styling. On the backend, we employ .Net. For frontend development, we use React for new projects and native JavaScript, including AMD modules and Require.js. Additionally, our products leverage WebRTC for chat functionalities.</p>`,
+  },
+  {
+    id: 4,
     name: "TUT.BY",
     location: "Minsk, Belarus",
     position: "Frontend Developer",
@@ -65,19 +106,19 @@ export const Experience = [
     end: "Nov 2020",
     type: "Full-time",
     descriptionHeader:
-      "TUT.BY group of companies (from 2000 to the present), ≈300 employees, regional offices in all regions of Belarus. Reporting directly to the Chief Engineer, member of the Board of Directors of the company.",
+      "TUT.BY group of companies (from 2000 to 2021), ≈300 employees, regional offices in all regions of Belarus. Reporting directly to the Chief Engineer, member of the Board of Directors of the company.",
     description: `<p>My responsibilities:</p>
-<ul>
-<li>development (HTML + JavaScript) of new blocks, sections, and pages for web portal</li>
-<li>updating, editing, and adding new functionality</li>
-<li>refactoring of legacy code</li>
-<li>development of various interactive applications and widgets for embedding in a news page (voting, step-by-step quizzes, interactive forms)</li>
-</ul>
-<p>There is a large number of completed <strong>interactive games and quizzes</strong>, affiliate materials.</p>
-<p>In my work, I use <strong>HTML</strong> and <strong>Pug</strong> for markup, <strong>Less</strong> for writing styles. I use <strong>Vue.js</strong> as the main framework for developing various applications. I use also native <strong>JavaScript</strong> and <strong>jQuery</strong> for developing functionality in places where <strong>Vue.js</strong> can not be used.</p>`,
+    <ul>
+    <li>Development and enhancement of new blocks, sections, and pages for the web portal using HTML and JavaScript</li>
+    <li>Continuous updates, edits, and additions of new functionalities</li>
+    <li>Refactoring of legacy code to improve maintainability and performance</li>
+    <li>Creation of various interactive applications and widgets for integration into a news page, such as voting systems, step-by-step quizzes, and interactive forms</li>
+  </ul>
+  <p>A significant number of interactive games and quizzes have been successfully completed, along with affiliate materials.</p>
+  <p>In my professional role, I utilize <strong>HTML</strong> and <strong>Pug</strong> for markup, <strong>Less</strong> for styling. <strong>Vue.js</strong> serves as the primary framework for developing various applications, supplemented by native <strong>JavaScript</strong> and <strong>jQuery</strong> for functionalities where <strong>Vue.js</strong> is not applicable.</p>`,
   },
   {
-    id: 3,
+    id: 5,
     name: "Altoros Development",
     location: "Minsk, Belarus",
     position: "Frontend Developer",
@@ -85,37 +126,35 @@ export const Experience = [
     end: "Nov 2013",
     type: "Full-time",
     descriptionHeader:
-      "Altoros is a leading IT services provider that helped 50+ Global 2000 organizations, ≈350 employees, 5 global offices. I've reported to Frontend Resource Manager",
-    description: `<p>During a short period of work in the company, I took part in <strong>5 projects</strong> as a Frontend developer.</p>
-<p>These were projects for customers from different countries, such as <strong>Norway</strong>, <strong>the USA</strong>, etc. The subjects of the projects were extremely versatile: from a web application for determining possible breast cancer in women to a social network for people of creative professions (musicians, artists, singers) and services to make an appointment with the veterinarian.</p>
-<p>My responsibilities:</p>
-<ul>
-<li>development of page layouts according to the finished design (<strong>Photoshop</strong>, <strong>Sketch</strong>)</li>
-<li>development of application functionality using the <strong>MVC</strong> paradigm and using <strong>backbone.js</strong> as the main JavaScript library</li>
-<li>work with <strong>RESTful JSON</strong></li>
-<li>development of functionality for applications using <strong>CoffeeScript</strong></li>
-</ul>
-<p>Technologies that I used: CoffeeScript and JavaScript for writing the main functionality of projects, <strong>Haml</strong> for markup, <strong>SASS</strong>, and <strong>SCSS</strong> for writing styles. I also had experience using frameworks and libraries such as Backbone.js and Apache Cordova.</p>`,
+      "Altoros is a premier IT services provider that has supported over 50 Global 2000 organizations, with approximately 350 employees across 5 global offices. I reported directly to the Frontend Resource Manager.",
+    description: `<p>During my brief tenure at the company, I contributed as a Frontend Developer to <strong>5 diverse projects</strong>.</p>
+    <p>These projects catered to clients from diverse countries, including <strong>Norway</strong> and <strong>the USA</strong>. The project themes varied widely, ranging from a web application for potential breast cancer detection in women to a social network for creative professionals like musicians, artists, and singers, as well as services for scheduling veterinary appointments.</p>
+    <p>My responsibilities included:</p>
+    <ul>
+    <li>Developing page layouts based on completed designs using <strong>Photoshop</strong> and <strong>Sketch</strong></li>
+    <li>Building application functionality employing the <strong>MVC</strong> paradigm with <strong>backbone.js</strong> as the primary JavaScript library</li>
+    <li>Working with <strong>RESTful JSON</strong> interfaces</li>
+    <li>Creating application features using <strong>CoffeeScript</strong></li>
+    </ul>
+    <p>Technologies I utilized included CoffeeScript and JavaScript for core functionality, <strong>Haml</strong> for markup, and <strong>SASS</strong> and <strong>SCSS</strong> for styling. My experience also extends to frameworks and libraries such as Backbone.js and Apache Cordova.</p>`,
   },
   {
-    id: 4,
+    id: 6,
     name:
-      "Information Center of the Ministry of Finance of the Republic of Belarus",
+      "Finance Ministry's Data Processing Center of the Republic of Belarus",
     position: "Software Engineer",
     location: "Minsk, Belarus",
     start: "Aug 2008",
     end: "Jan 2012",
     type: "Full-time",
-    descriptionHeader:
-      'The unitary enterprise "Information and Computing Center of the Ministry of Finance" has been providing services for automation, development, and maintenance of software systems for more than 46 years',
+    descriptionHeader: `The unitary enterprise "Finance Ministry's Data Processing Center of the Republic of Belarus" has been providing services for automation, development, and maintenance of software systems for more than 50 years`,
     description: `<p>My responsibilities included:</p>
-    
-<ul>
-<li>development and support of the website www.ivcmf.by</li>
-<li>development of custom modules for a website (running on <strong>MODx CMS</strong>) using <strong>PHP</strong>, <strong>JavaScript</strong>, <strong>CSS</strong> (checking client licenses, receiving software updates)</li>
-<li>support and development of new functions for generating reports of insurance companies of the Republic of Belarus for delivery to the Ministry of Finance in the form of Excel files</li>
-<li>writing <strong>SQL</strong> queries and working with <strong>MSSQL</strong></li>
-</ul>`,
+    <ul>
+      <li>development and maintenance of the website www.ivcmf.by</li>
+      <li>creation of custom modules for a website running on <strong>MODx CMS</strong>, utilizing <strong>PHP</strong>, <strong>JavaScript</strong>, and <strong>CSS</strong> for functionalities such as license verification and software updates</li>
+      <li>enhancement and support of new functionalities for generating and delivering reports for insurance companies of the Republic of Belarus to the Ministry of Finance in Excel format</li>
+      <li>formulation and execution of <strong>SQL</strong> queries and operations with <strong>MSSQL</strong></li>
+    </ul>`,
   },
 ];
 
@@ -141,7 +180,7 @@ export const Education = [
 ];
 export const Skills = [
   "Languages: <strong>English (B2)</strong>, EF SET English certificate <a href='https://www.efset.org/cert/E8BLq3'>https://efset.org/cert/E8BLq3</a>",
-  "JavaScript (ES6+), Vue.js (Vuex, Nuxt.js), React.js (Next.js), AMD, CommonJS, Require.js, WebRTC, WebSockets",
+  "JavaScript (ES6+), Vue.js (Vuex, Nuxt.js), React.js (Redux Toolkit, Styled Components), REST, AMD, CommonJS, Require.js, WebRTC, WebSockets (Socket.io, SignalR adapter for .Net backend)",
   "Node.js, REST, MongoDB",
 ];
 
