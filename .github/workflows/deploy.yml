@@ -1,0 +1,20 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Или ваша основная ветка, если она называется иначе
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Укажите версию Node.js, которая используется в вашем проекте
+    - name: Install dependencies
+      run: npm install
+    - name: Build and Deploy
+      run: npm run deploy
