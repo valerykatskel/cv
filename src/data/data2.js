@@ -35,33 +35,33 @@ export const Achievements = [
 ];
 
 export const Experience = [
-  // {
-  //   id: 1,
-  //   name: "iFuture",
-  //   location: "Minsk, Belarus",
-  //   position: "Frontend Team Lead",
-  //   start: "May 2023",
-  //   end: "April 2024",
-  //   type: "Full-time",
-  //   descriptionHeader:
-  //     "The company iFuture was founded by professionals with many years of experience in the field of information technology.",
-  //   description: `<p>My responsibilities:</p>
-  //   <ul>
-  //     <li>mentoring new employees and conducting regular meetings throughout their adaptation period</li>
-  //     <li>creating a competency matrix to assess the strengths and weaknesses within the team</li>
-  //     <li>reviewing the team's commits to ensure code quality and consistency</li>
-  //     <li>analyzing the existing codebase to identify redundant components and code, and encapsulating them into an npm library for efficient reuse in development</li>
-  //     <li>conducting personalized 1-to-1 meetings with team members to discuss progress and address concerns</li>
-  //   </ul>
-  //   <p>I employ React as the primary library for UI rendering, complemented by Material UI for the component suite. Artifactory serves as our local repository for npm packages and build artifacts. Additionally, Atlassian Bamboo is utilized for constructing projects, formulating build plans, and orchestrating deployment strategies.</p>`,
-  // },
+  {
+    id: 1,
+    name: "iFuture",
+    location: "Minsk, Belarus",
+    position: "Frontend Team Lead",
+    start: "May 2023",
+    end: "April 2024",
+    type: "Full-time",
+    descriptionHeader:
+      "The company iFuture was founded by professionals with many years of experience in the field of information technology.",
+    description: `<p>My responsibilities:</p>
+    <ul>
+      <li>mentoring new employees and conducting regular meetings throughout their adaptation period</li>
+      <li>creating a competency matrix to assess the strengths and weaknesses within the team</li>
+      <li>reviewing the team's commits to ensure code quality and consistency</li>
+      <li>analyzing the existing codebase to identify redundant components and code, and encapsulating them into an npm library for efficient reuse in development</li>
+      <li>conducting personalized 1-to-1 meetings with team members to discuss progress and address concerns</li>
+    </ul>
+    <p>I employ React as the primary library for UI rendering, complemented by Material UI for the component suite. Artifactory serves as our local repository for npm packages and build artifacts. Additionally, Atlassian Bamboo is utilized for constructing projects, formulating build plans, and orchestrating deployment strategies.</p>`,
+  },
   {
     id: 2,
-    name: "Abava Solutions",
-    location: "Erevan, Armenia",
+    name: "Social Discovery Ventures",
+    location: "Minsk, Belarus",
     position: "Frontend Team Lead",
     start: "May 2022",
-    end: "",
+    end: "May 2023",
     type: "Full-time",
     descriptionHeader:
       "Social Discovery Ventures is a collection of unique online brands which enable people around the globe to discover each other through the power of shared interests and mutual benefit.",
