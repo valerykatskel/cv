@@ -66,7 +66,7 @@ export const Experience = [
   {
     id: 2,
     name: "Social Discovery Ventures",
-    location: "Erevan, Armenia",
+    location: "Remote",
     position: "Frontend Team Lead",
     start: "May 2022",
     end: "",
@@ -87,7 +87,7 @@ export const Experience = [
   {
     id: 3,
     name: "Social Discovery Ventures",
-    location: "Minsk, Belarus",
+    location: "Remote",
     position: "Senior Frontend Engineer",
     start: "Nov 2020",
     end: "May 2022",
