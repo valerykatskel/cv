@@ -1,38 +1,41 @@
 <template>
-  <div class="cv-section cv-header">
+  <section class="cv-section cv-header">
     <div class="cv-section-inner">
       <div class="header-left">
         <div class="cv-personal-information">
-          <h2>{{ data.name }}</h2>
-          <h3>{{ data.position }}</h3>
-          <h4>{{ age }}, {{ data.location }}</h4>
+          <h2>{{ personalInfo.name }}</h2>
+          <h3>{{ personalInfo.position }}</h3>
+          <h4>{{ age }}, {{ personalInfo.location }}</h4>
         </div>
 
         <ul class="cv-contact-info">
-          <li><span class="name">E-mail:</span>valery.katskel@gmail.com</li>
-          <li><span class="name">Skype:</span>bestnickname</li>
-          <li>
-            <span class="name">Phone/WhatsApp/Telegram/Viber:</span
-            >+375297688632
-          </li>
-
-          <li>
-            <span class="name">GitHub:</span>
-            <a href="https://github.com/valerykatskel"
-              >github.com/valerykatskel</a
-            >
+          <li v-for="contact in formattedContacts" :key="contact.key">
+            <span class="name">{{ contact.key }}</span>
+            <template v-if="contact.url">
+              <a :href="contact.url" target="_blank" rel="noopener">
+                {{ contact.value }}
+              </a>
+            </template>
+            <template v-else>
+              {{ contact.value }}
+            </template>
           </li>
         </ul>
       </div>
+
       <div class="header-right">
-        <img src="@/assets/photo.jpg" alt />
+        <img
+          src="@/assets/photo.jpg"
+          :alt="personalInfo.name"
+          class="profile-photo"
+        />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import { Header } from "../data/data";
+import { Header, contacts } from "../data/data";
 import moment from "moment";
 
 export default {
@@ -40,84 +43,121 @@ export default {
 
   data() {
     return {
-      data: {},
+      personalInfo: {},
+      formattedContacts: [],
     };
   },
+
   computed: {
     age() {
-      const tsStart = Date.parse(this.data.yob);
-      const tsEnd = Date.now();
-      const duration = Math.ceil(
-        moment.duration((tsEnd - tsStart) / 1000, "seconds").years()
-      );
+      if (!this.personalInfo.yob) return "";
 
-      return `${duration} years old`;
+      const birthDate = Date.parse(this.personalInfo.yob);
+      const now = Date.now();
+      const years = moment
+        .duration((now - birthDate) / 1000, "seconds")
+        .years();
+
+      return `${Math.ceil(years)} years old`;
     },
   },
+
+  methods: {
+    formatContacts(contactsList) {
+      return contactsList.map((contact) => ({
+        ...contact,
+        url: this.isUrl(contact.value) ? contact.value : null,
+      }));
+    },
+
+    isUrl(value) {
+      return typeof value === "string" && value.startsWith("http");
+    },
+
+    initializeData() {
+      this.personalInfo = { ...Header };
+      this.formattedContacts = this.formatContacts(contacts);
+    },
+  },
+
   mounted() {
-    this.$nextTick(() => {
-      this.data = { ...Header };
-    });
+    this.$nextTick(this.initializeData);
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h2,
-h3 {
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.9);
-}
-h2 {
-  font-size: 3.2rem;
-  line-height: 1.25;
-}
 .cv-header {
   .cv-section-inner {
     display: flex;
     justify-content: space-between;
-    h2 {
-      margin-top: -8px;
-    }
-    h3 {
-      font-weight: normal;
-      font-size: 18px;
-      margin-bottom: 0;
-      margin-top: 5px;
-    }
-    h4 {
-      font-size: 14px;
-      color: gray;
-      margin-top: 5px;
-    }
-  }
-  .header-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .header-right {
-    img {
-      height: 200px;
-      vertical-align: bottom;
-    }
   }
 }
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-right {
+  .profile-photo {
+    height: 200px;
+    vertical-align: bottom;
+  }
+}
+
+.cv-personal-information {
+  h2 {
+    font-size: 3.2rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: -8px;
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 18px;
+    margin: 5px 0 0;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  h4 {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+  }
+}
+
 .cv-contact-info {
-  margin: 16px 0 0;
+  margin: 16px 20px 0 0;
   padding: 0;
   list-style-type: none;
 
   li {
     font-size: 14px;
+    display: flex; // Добавлено
+    flex-wrap: wrap; // Добавлено
+  }
 
-    .name {
-      display: inline-block;
-      width: 280px;
+  .name {
+    display: inline-block;
+    min-width: 280px;
+    flex-shrink: 0;
+  }
+
+  a {
+    word-break: break-all;
+    color: #0073b1;
+    text-decoration: none;
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover {
+      text-decoration: underline;
     }
   }
-}
-.cv-personal-information {
 }
 </style>

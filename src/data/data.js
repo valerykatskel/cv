@@ -11,7 +11,7 @@ export const Summary = {
   text: `I worked as a Frontend Engineer on scalable international projects. I have experience writing applications on Vue.js using various related technologies, such as Vuex, Vuetify, Nuxt and etc. `,
 };
 
-export const Contact = [
+export const contacts = [
   {
     key: "E-mail:",
     value: "valerykatskel@gmail.com",
@@ -23,6 +23,14 @@ export const Contact = [
   {
     key: "Skype:",
     value: "bestnickname",
+  },
+  {
+    key: "LinkedIn:",
+    value: "https://www.linkedin.com/in/valerykatskel/",
+  },
+  {
+    key: "GitHub:",
+    value: "https://github.com/valerykatskel",
   },
 ];
 
@@ -57,7 +65,7 @@ export const Experience = [
   // },
   {
     id: 2,
-    name: "Abava Solutions",
+    name: "Social Discovery Ventures",
     location: "Erevan, Armenia",
     position: "Frontend Team Lead",
     start: "May 2022",
