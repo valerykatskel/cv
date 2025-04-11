@@ -18,14 +18,14 @@ export default {
 
   data() {
     return {
-      data: {}
+      data: {},
     };
   },
   mounted() {
     this.$nextTick(() => {
       this.data = Achievements;
     });
-  }
+  },
 };
 </script>
 

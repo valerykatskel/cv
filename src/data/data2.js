@@ -95,7 +95,8 @@ export const Experience = [
       <li>diagnosing and resolving bugs to improve system stability</li>
       <li>optimizing existing code to enhance performance and maintainability</li>
     </ul>
-    <p>In my professional capacity, I utilize <strong>HTML</strong> for markup and <strong>Less</strong> for styling. On the backend, we employ .Net. For frontend development, we use React for new projects and native JavaScript, including AMD modules and Require.js. Additionally, our products leverage WebRTC for chat functionalities.</p>`,
+    <p>In my professional capacity, I utilize <strong>HTML</strong> for markup and <strong>Less</strong> for styling. On the backend, we employ .Net. For frontend development, we use React for new projects and native JavaScript, including AMD modules and Require.js. Additionally, our products leverage WebRTC for chat functionalities.</p>
+    <p>Я специализируюсь на деобфускации кода с элементами реверс-инжиниринга, применяя глубокий анализ абстрактного синтаксического дерева (AST) для восстановления исходной структуры запутанного кода. Разрабатываю собственные инструменты для автоматизации процесса деобфускации, позволяющие эффективно анализировать сложные паттерны обфускации и выявлять скрытые функциональности. Мой опыт включает работу с различными техниками защиты JavaScript-кода и методами противодействия анализу веб-приложений.</p>`,
   },
   {
     id: 4,

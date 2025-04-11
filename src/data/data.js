@@ -64,6 +64,26 @@ export const Experience = [
   //   <p>I employ React as the primary library for UI rendering, complemented by Material UI for the component suite. Artifactory serves as our local repository for npm packages and build artifacts. Additionally, Atlassian Bamboo is utilized for constructing projects, formulating build plans, and orchestrating deployment strategies.</p>`,
   // },
   {
+    id: 1,
+    name: "Octo Browser",
+    location: "Minsk, Belarus",
+    position: "RnD Engineer",
+    start: "Dec 2024",
+    end: "Feb 2025",
+    type: "Full-time",
+    descriptionHeader:
+      "OctoBrowser is an advanced anti-detection browser designed for professional marketing, providing secure multi-accounting capabilities with sophisticated fingerprint management to prevent tracking and account restrictions.",
+    description: `<p>My responsibilities include research initiatives in browser security and anti-detection technologies:</p>
+    <ul>
+      <li>Spearheading comprehensive analysis of browser fingerprinting mechanisms and developing innovative solutions to enhance privacy protection</li>
+      <li>Conducting in-depth research on advanced browser identification techniques including Canvas, WebGL, and Audio fingerprinting vectors</li>
+      <li>Investigating anti-detection systems focusing on hardware specifications emulation and browser behavior normalization</li>
+      <li>Researching JavaScript engine behavioral patterns and DOM manipulation signatures</li>
+      <li>Developing deobfuscation tools utilizing Abstract Syntax Tree (AST) analysis for reverse engineering of obfuscated code</li>
+    </ul>
+    <p>I specialize in code deobfuscation with elements of reverse engineering, applying deep analysis of the Abstract Syntax Tree (AST) to restore the original structure of obfuscated code. I develop custom tools to automate the deobfuscation process, enabling efficient analysis of complex obfuscation patterns and identification of hidden functionalities. My experience includes working with various JavaScript code protection techniques and methods to counter web application analysis.</p>`,
+  },
+  {
     id: 2,
     name: "Social Discovery Ventures",
     location: "Remote",
@@ -82,7 +102,7 @@ export const Experience = [
     <li>breaking down complex technical tasks into manageable subtasks and accurately estimating timelines and resources required</li>
     <li>strategically planning the roadmap for technological stack updates to enhance development efficiency and product scalability</li>
     </ul>
-    <p>I employ React as the primary library for developing applications, leveraging various elements of the React ecosystem such as Redux Toolkit for predictable state management, and asyncThunk for handling diverse asynchronous operations that integrate results into the state. Following a technology stack upgrade, we transitioned to utilizing Websockets for chat functionalities, with backend implementations powered by SignalR for .Net.</p>`,
+    <p>I specialize in code deobfuscation with elements of reverse engineering, applying deep analysis of the Abstract Syntax Tree (AST) to restore the original structure of obfuscated code. I develop custom tools to automate the deobfuscation process, enabling efficient analysis of complex obfuscation patterns and identification of hidden functionalities. My experience includes working with various JavaScript code protection techniques and methods to counter web application analysis.</p>`,
   },
   {
     id: 3,

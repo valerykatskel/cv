@@ -6,8 +6,8 @@
 export default {
   name: "CvSkill",
   props: {
-    skill: String
-  }
+    skill: String,
+  },
 };
 </script>
 

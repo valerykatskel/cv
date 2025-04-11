@@ -1,5 +1,7 @@
 <template>
-  <li class="cv-project cv-project--with-separator cv-project--first cv-project--expanded">
+  <li
+    class="cv-project cv-project--with-separator cv-project--first cv-project--expanded"
+  >
     <h4 class="cv-project__title t-14 t-bold">
       <span class="visually-hidden">Project name</span>
       {{ project.name }}
@@ -26,15 +28,15 @@
 export default {
   name: "CvProject",
   props: {
-    project: Object
+    project: Object,
   },
   computed: {
     projectDuration() {
       return this.project.start === this.project.end
         ? this.project.start
         : `${this.project.start} – ${this.project.end}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

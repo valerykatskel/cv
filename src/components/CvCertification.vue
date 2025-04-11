@@ -23,14 +23,14 @@
 export default {
   name: "CvCertification",
   props: {
-    certification: Object
+    certification: Object,
   },
   computed: {},
   methods: {
     getAltText(name) {
       return `Logo for  ${name}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

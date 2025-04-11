@@ -36,13 +36,13 @@ export default {
   name: "CvEducation",
   data() {
     return {
-      data: {}
+      data: {},
     };
   },
   methods: {
     getDuration(start, end) {
       return end === "" ? `${start} – Present` : `${start} – ${end}`;
-    }
+    },
   },
   computed: {
     duration() {
@@ -50,13 +50,13 @@ export default {
       // return this.data.end === ""
       //   ? `${this.data.start} – Present`
       //   : `${this.data.start} – ${this.data.end}`;
-    }
+    },
   },
   mounted() {
     this.$nextTick(() => {
       this.data = Education;
     });
-  }
+  },
 };
 </script>
 

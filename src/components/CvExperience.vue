@@ -57,7 +57,7 @@ export default {
   name: "CvExperience",
   data() {
     return {
-      data: {}
+      data: {},
     };
   },
   methods: {
@@ -84,14 +84,14 @@ export default {
       return end === ""
         ? `${durationText} (${start} – Present)`
         : `${durationText} (${start} – ${end})`;
-    }
+    },
   },
   computed: {},
   mounted() {
     this.$nextTick(() => {
       this.data = Experience;
     });
-  }
+  },
 };
 </script>
 
