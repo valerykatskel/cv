@@ -1,7 +1,7 @@
 export const Header = {
   name: "Valery Katskel",
   location: "Minsk (Belarus)",
-  position: "Frontend Team Lead",
+  position: "Senior Frontend Develope / Frontend Team Lead",
   sex: "Male",
   yob: "Oct 9, 1983",
   degree: "B.A.",
