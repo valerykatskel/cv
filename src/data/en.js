@@ -53,15 +53,11 @@ export const Experience = [
     end: "Feb 2025",
     type: "Full-time",
     descriptionHeader:
-      "OctoBrowser is an advanced anti-detection browser designed for professional marketing, providing secure multi-accounting capabilities with sophisticated fingerprint management to prevent tracking and account restrictions.",
+      "OctoBrowser is an advanced anti-detection browser for professional marketing, providing secure multi-accounting capabilities.",
     description: `<p>Key achievements:</p>
     <ul>
-      <li>Developed and implemented a browser fingerprinting detection and prevention system, reducing user detectability by 87% compared to the previous product version</li>
       <li>Created a hardware specifications emulation algorithm that increased blocking bypass success by 62% on target platforms</li>
       <li>Developed an automated JavaScript code deobfuscation tool based on AST analysis, reducing analysis time of protection mechanisms from weeks to hours</li>
-      <li>Designed and implemented a plugin architecture for DOM manipulation, increasing application stability by 45% under high loads</li>
-      <li>Automated detection resistance testing, allowing vulnerabilities to be identified and eliminated 73% faster</li>
-      <li>Optimized browser behavior normalization algorithms, reducing CPU consumption by 38% while maintaining protection effectiveness</li>
     </ul>
     <p>Technology stack: JavaScript, TypeScript, WebGL, Canvas API, WebRTC, Chrome Extensions API, Puppeteer, Node.js</p>`,
   },
