@@ -1,64 +1,81 @@
 <template>
-  <div v-if="data.length > 0" class="cv-section">
+  <div
+    class="cv-section skill-section"
+    v-if="education && education.length > 0"
+  >
     <div class="cv-section-inner">
-      <h3>Education</h3>
+      <h3>{{ currentLanguage === "ru" ? "Образование" : "Education" }}</h3>
 
-      <ul
-        class="pv-accomplishments-block__list pv-accomplishments-block__list--has-more"
+      <div
+        v-for="item in education"
+        :key="item.id"
+        class="pv-entity__position-group mt2"
       >
-        <li
-          class="cv-section-item"
-          v-for="item in data"
-          :key="item.id"
-          :item="item"
-        >
-          <div class="full-width">
-            <h4 class="t-16 t-black t-bold">{{ item.position }}</h4>
-            <p class="t-16 t-black">{{ item.name }}</p>
-            <p class="t-14 t-black">{{ getDuration(item.start, item.end) }}</p>
-            <div class="break-words t-14 t-black item-description">
-              <div
-                dir="ltr"
-                class="description-content"
-                v-html="item.description"
-              ></div>
-            </div>
+        <div class="entity-name">
+          <h3>{{ item.name }}</h3>
+          <div>
+            <strong>{{ item.position }}</strong>
+            <br />
+            <span>{{ item.start }} - {{ item.end }}</span>
           </div>
-        </li>
-      </ul>
+        </div>
+        <div class="entity-description">
+          <div v-html="item.description"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Education } from "../data/data";
+import { i18n } from "../i18n";
+
 export default {
   name: "CvEducation",
+  props: {
+    education: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
-      data: {},
+      currentLanguage: i18n.currentLanguage,
     };
   },
-  methods: {
-    getDuration(start, end) {
-      return end === "" ? `${start} – Present` : `${start} – ${end}`;
-    },
-  },
-  computed: {
-    duration() {
-      return this.data;
-      // return this.data.end === ""
-      //   ? `${this.data.start} – Present`
-      //   : `${this.data.start} – ${this.data.end}`;
-    },
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.data = Education;
-    });
+  created() {
+    // Обновление текущего языка при его изменении
+    this.$watch(
+      () => i18n.currentLanguage,
+      (newVal) => {
+        this.currentLanguage = newVal;
+      }
+    );
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style lang="scss" scoped>
+.entity-name {
+  width: 31%;
+  flex-shrink: 0;
+  padding-right: 15px;
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+.entity-description {
+  width: 69%;
+  flex-shrink: 0;
+  position: relative;
+}
+.pv-entity__position-group {
+  display: flex;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+</style>

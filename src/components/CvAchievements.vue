@@ -1,30 +1,46 @@
 <template>
-  <div v-if="data.length > 0" class="cv-section">
+  <div
+    class="cv-section skill-section"
+    v-if="achievements && achievements.length > 0"
+  >
     <div class="cv-section-inner">
-      <h3>Achievements</h3>
+      <h3>{{ currentLanguage === "ru" ? "Достижения" : "Achievements" }}</h3>
+
       <ul class="cv-section-list">
-        <li v-for="item in data" :key="item">
-          <span v-html="item"></span>
-        </li>
+        <li
+          v-for="(achievement, i) in achievements"
+          :key="i"
+          v-html="achievement"
+        ></li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-import { Achievements } from "../data/data";
+import { i18n } from "../i18n";
+
 export default {
   name: "CvAchievements",
-
+  props: {
+    achievements: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
-      data: {},
+      currentLanguage: i18n.currentLanguage,
     };
   },
-  mounted() {
-    this.$nextTick(() => {
-      this.data = Achievements;
-    });
+  created() {
+    // Обновление текущего языка при его изменении
+    this.$watch(
+      () => i18n.currentLanguage,
+      (newVal) => {
+        this.currentLanguage = newVal;
+      }
+    );
   },
 };
 </script>

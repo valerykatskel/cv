@@ -1,64 +1,61 @@
 <template>
-  <div v-if="data.length > 0" class="cv-section">
+  <div
+    class="cv-section skill-section"
+    v-if="experience && experience.length > 0"
+  >
     <div class="cv-section-inner">
-      <h3>Experience</h3>
+      <h3>{{ currentLanguage === "ru" ? "Опыт работы" : "Experience" }}</h3>
 
-      <ul
-        class="pv-accomplishments-block__list pv-accomplishments-block__list--has-more"
+      <div
+        v-for="item in experience"
+        :key="item.id"
+        class="pv-entity__position-group mt2"
       >
-        <li
-          class="cv-section-item"
-          v-for="item in data"
-          :key="item.id"
-          :item="item"
-        >
-          <div class="full-width">
-            <h4 class="t-16 t-black t-bold">{{ item.position }}</h4>
-            <p class="t-16 t-black">
-              {{ item.name }}
-              <span
-                v-show="item.type !== undefined && item.type.trim().length > 0"
-                class="pv-entity__secondary-title separator"
-                >{{ item.type }}</span
-              >
-            </p>
-            <p class="t-14 t-black">
-              {{ getDuration(item.start, item.end) }}
-              <span
-                v-show="
-                  item.location !== undefined && item.location.trim().length > 0
-                "
-                class="pv-entity__secondary-title separator"
-                >{{ item.location }}</span
-              >
-            </p>
-
-            <div class="break-words t-14 t-black item-description">
-              <p v-if="item.descriptionHeader != ''" class="description-header">
-                {{ item.descriptionHeader }}
-              </p>
-              <div
-                class="description-content"
-                dir="ltr"
-                v-html="item.description"
-              />
-            </div>
+        <div class="entity-name">
+          <h3>{{ item.name }} - {{ item.position }}</h3>
+          <div>
+            <strong>{{ item.type }}</strong>
+            <br />
+            <span
+              >{{ item.start }} - {{ item.end ? item.end : "Present" }}</span
+            >
           </div>
-        </li>
-      </ul>
+        </div>
+        <div class="entity-description">
+          <p class="entity-description-top" v-html="item.descriptionHeader"></p>
+          <div v-html="item.description"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { i18n } from "../i18n";
 import { Experience } from "../data/data";
 import moment from "moment";
+
 export default {
   name: "CvExperience",
+  props: {
+    experience: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
+      currentLanguage: i18n.currentLanguage,
       data: {},
     };
+  },
+  created() {
+    this.$watch(
+      () => i18n.currentLanguage,
+      (newVal) => {
+        this.currentLanguage = newVal;
+      }
+    );
   },
   methods: {
     getLogoAlt(name) {
@@ -129,6 +126,31 @@ export default {
         font-size: 14px;
       }
     }
+  }
+}
+.entity-name {
+  width: 31%;
+  flex-shrink: 0;
+  padding-right: 15px;
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+.entity-description {
+  width: 69%;
+  flex-shrink: 0;
+  position: relative;
+  .entity-description-top {
+    margin-bottom: 20px;
+  }
+}
+.pv-entity__position-group {
+  display: flex;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
 </style>

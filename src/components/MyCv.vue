@@ -1,19 +1,27 @@
 <template>
   <div class="core-rail container-with-shadow p0" role="main">
-    <cv-header />
-    <cv-achievements />
+    <language-switcher @language-changed="loadLocaleData" />
+    <cv-header
+      :header="localeData.Header"
+      :contacts="localeData.contacts"
+      :summary="localeData.Summary"
+    />
+    <cv-achievements :achievements="localeData.Achievements" />
 
-    <cv-experience />
+    <cv-experience :experience="localeData.Experience" />
 
-    <cv-education />
+    <cv-education :education="localeData.Education" />
 
     <!-- CV Skills section start -->
-    <div v-if="skills.length > 0" class="cv-section skill-section">
+    <div
+      v-if="localeData.Skills && localeData.Skills.length > 0"
+      class="cv-section skill-section"
+    >
       <div class="cv-section-inner">
-        <h3>Skills</h3>
+        <h3>{{ currentLanguage === "ru" ? "Навыки" : "Skills" }}</h3>
 
         <ul class="cv-section-list">
-          <li v-for="skill in skills" :key="skill.id">
+          <li v-for="(skill, index) in localeData.Skills" :key="index">
             <cv-skill :skill="skill" />
           </li>
         </ul>
@@ -22,24 +30,24 @@
     <!-- CV Skills section end -->
 
     <!-- CV Projects section start -->
-    <!-- <div v-if="projects.length > 0" class="cv-section">
+    <!-- <div v-if="localeData.Projects && localeData.Projects.length > 0" class="cv-section">
       <div class="cv-section-inner">
-        <h3>Projects</h3>
+        <h3>{{ currentLanguage === 'ru' ? 'Проекты' : 'Projects' }}</h3>
 
         <ul class="pv-accomplishments-block__list pv-accomplishments-block__list--has-more">
-          <cv-project v-for="project in projects" :key="project.id" :project="project" />
+          <cv-project v-for="project in localeData.Projects" :key="project.id" :project="project" />
         </ul>
       </div>
     </div>-->
     <!-- CV Projects section end -->
 
     <!-- CV Licenses & Certifications section start -->
-    <!-- <div v-if="certifications.length > 0" class="cv-section">
-      <h3>Licenses &amp; certifications</h3>
+    <!-- <div v-if="localeData.Certifications && localeData.Certifications.length > 0" class="cv-section">
+      <h3>{{ currentLanguage === 'ru' ? 'Лицензии и сертификаты' : 'Licenses & certifications' }}</h3>
 
       <ul>
         <cv-certification
-          v-for="certification in certifications"
+          v-for="certification in localeData.Certifications"
           :key="certification.id"
           :certification="certification"
         />
@@ -62,20 +70,21 @@
       </p>
       <p>
         b) w celach związanych z organizowanymi w przyszłości procesami
-        rekrutacji.”
+        rekrutacji."
       </p>
     </div>
   </div>
 </template>
 
 <script>
-import { Projects, Skills, Certifications } from "../data/data";
+import { i18n } from "../i18n";
 import CvHeader from "./CvHeader";
 import CvAchievements from "./CvAchievements";
 // import CvProject from "./CvProject";
 import CvSkill from "./CvSkill";
 import CvExperience from "./CvExperience";
 import CvEducation from "./CvEducation";
+import LanguageSwitcher from "./LanguageSwitcher";
 // import CvCertification from "./CvCertification";
 export default {
   name: "MyCv",
@@ -85,25 +94,49 @@ export default {
     // CvProject,
     CvSkill,
     CvExperience,
-    CvEducation
+    CvEducation,
+    LanguageSwitcher,
     // CvCertification
   },
   data() {
     return {
       CVForPoland: false,
-      projects: [],
-      skills: [],
-      experience: [],
-      certifications: []
+      localeData: {
+        Header: {},
+        contacts: [],
+        Summary: {},
+        Achievements: [],
+        Experience: [],
+        Skills: [],
+        Education: [],
+        Projects: [],
+        Certifications: [],
+      },
+      currentLanguage: i18n.currentLanguage,
     };
   },
-  mounted() {
-    this.$nextTick(() => {
-      this.projects = Projects;
-      this.skills = Skills;
-      this.certifications = Certifications;
-    });
-  }
+  async mounted() {
+    await this.loadLocaleData();
+  },
+  methods: {
+    async loadLocaleData() {
+      this.currentLanguage = i18n.currentLanguage;
+      const localeModule = await i18n.getCurrentLocale();
+
+      // Загружаем данные из модуля языка
+      this.localeData = {
+        Header: localeModule.Header || {},
+        contacts: localeModule.contacts || [],
+        Summary: localeModule.Summary || {},
+        Achievements: localeModule.Achievements || [],
+        Experience: localeModule.Experience || [],
+        Skills: localeModule.Skills || [],
+        Education: localeModule.Education || [],
+        Projects: localeModule.Projects || [],
+        Certifications: localeModule.Certifications || [],
+      };
+    },
+  },
 };
 </script>
 

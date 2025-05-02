@@ -1,12 +1,15 @@
 <template>
-  <span class="cv-section-skill-section__skill" v-html="skill"></span>
+  <span v-html="skill"></span>
 </template>
 
 <script>
 export default {
   name: "CvSkill",
   props: {
-    skill: String,
+    skill: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>

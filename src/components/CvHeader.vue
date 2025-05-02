@@ -40,14 +40,27 @@ import moment from "moment";
 
 export default {
   name: "CvHeader",
-
+  props: {
+    header: {
+      type: Object,
+      default: () => ({}),
+    },
+    contacts: {
+      type: Array,
+      default: () => [],
+    },
+    summary: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
   data() {
     return {
       personalInfo: {},
       formattedContacts: [],
+      isShowDropdown: false,
     };
   },
-
   computed: {
     age() {
       if (!this.personalInfo.yob) return "";
@@ -61,7 +74,6 @@ export default {
       return `${Math.ceil(years)} years old`;
     },
   },
-
   methods: {
     formatContacts(contactsList) {
       return contactsList.map((contact) => ({
@@ -77,6 +89,18 @@ export default {
     initializeData() {
       this.personalInfo = { ...Header };
       this.formattedContacts = this.formatContacts(contacts);
+    },
+
+    toggleDropdown() {
+      this.isShowDropdown = !this.isShowDropdown;
+    },
+
+    checkHeader(prop) {
+      return this.header && this.header[prop];
+    },
+
+    checkSummary(prop) {
+      return this.summary && this.summary[prop];
     },
   },
 
