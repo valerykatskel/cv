@@ -6,7 +6,6 @@ export const Header = {
   yob: "Oct 9, 1983",
   degree: "B.A.",
 };
-
 export const Summary = {
   text: `Frontend architect and tech leader with 12+ years of expertise delivering high-performance web applications. Proven track record of increasing development efficiency by 40% through modern tech stack adoption (React, Vue, TypeScript) and optimizing legacy systems. Expert in leading multi-functional teams of up to 10 developers, implementing scalable component architectures, and driving technical transformations that deliver measurable business results.`,
 };
