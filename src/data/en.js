@@ -73,12 +73,10 @@ export const Experience = [
       "Social Discovery Ventures is a collection of unique online brands which enable people around the globe to discover each other through the power of shared interests and mutual benefit.",
     description: `<p>Key achievements:</p>
     <ul>
-      <li>Transformed fragmented frontend teams into a cohesive 8-developer unit by implementing structured development and code review processes, reducing production errors by 35%</li>
       <li>Developed and executed a legacy codebase migration strategy to modern technology stack (React, TypeScript), increasing new feature development speed by 42%</li>
-      <li>Created and implemented a mentoring and training system for junior developers, reducing their team integration time from 3 months to 3 weeks</li>
+      <li>Created and implemented a mentoring and onboarding system for developers, reducing their team integration time from 3 months to 3 weeks</li>
       <li>Optimized the CI/CD pipeline, cutting deployment time from 40 minutes to 12 minutes (70% reduction) while ensuring automated code quality checks</li>
       <li>Developed a component library for UI element reuse, accelerating new interface development by 30% and ensuring design consistency</li>
-      <li>Organized regular technical meetups within the team, enhancing knowledge sharing and innovation adoption, resulting in 5 internal improvement projects</li>
     </ul>
     <p>Technology stack: React, Redux, TypeScript, WebRTC, Jest, Cypress, GitLab CI/CD, Docker, Storybook</p>`,
   },
@@ -94,7 +92,7 @@ export const Experience = [
       "Social Discovery Ventures is a collection of unique online brands which enable people around the globe to discover each other through the power of shared interests and mutual benefit.",
     description: `<p>Key achievements:</p>
     <ul>
-      <li>Led a codebase modernization project, rewriting critical modules from AMD/Require.js to modern ES6, which reduced production errors by 35%</li>
+      <li>Led a codebase modernization project, rewriting critical modules from AMD/Require.js to modern ES6, which reduced production errors</li>
       <li>Optimized frontend performance for international social applications, decreasing loading time by 42% and FCP by 1.8 seconds</li>
       <li>Developed a cross-browser WebRTC solution for video chat with low-bandwidth streaming capabilities, increasing service accessibility for users from developing countries</li>
       <li>Implemented a frontend performance monitoring system based on Sentry and Google Analytics, which helped identify and eliminate bottlenecks in user scenarios</li>
