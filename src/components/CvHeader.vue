@@ -36,7 +36,6 @@
 
 <script>
 import { i18n } from "../i18n";
-import moment from "moment";
 
 export default {
   name: "CvHeader",
@@ -74,16 +73,48 @@ export default {
     age() {
       if (!this.header || !this.header.yob) return "";
 
-      const birthDate = Date.parse(this.header.yob);
-      const now = Date.now();
-      const years = moment
-        .duration((now - birthDate) / 1000, "seconds")
-        .years();
+      try {
+        let birthYear;
+        // Если русская версия, извлекаем год из строки "9 октября 1983"
+        if (i18n.currentLanguage === "ru") {
+          // Извлекаем год из конца строки
+          const yearMatch = this.header.yob.match(/\d{4}$/);
+          birthYear = yearMatch ? parseInt(yearMatch[0]) : 1983;
+        } else {
+          // Для английской версии используем полную дату
+          const birthDate = new Date(this.header.yob);
+          birthYear = birthDate.getFullYear();
+        }
 
-      // Возвращаем возраст с правильным текстом в зависимости от языка
-      return i18n.currentLanguage === "ru"
-        ? `${Math.ceil(years)} лет`
-        : `${Math.ceil(years)} years old`;
+        // Вычисляем возраст
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - birthYear;
+
+        // Возвращаем возраст с правильным текстом в зависимости от языка
+        if (i18n.currentLanguage === "ru") {
+          // Правильное склонение для русского языка
+          let yearWord;
+          const lastDigit = age % 10;
+          const lastTwoDigits = age % 100;
+
+          if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+            yearWord = "лет";
+          } else if (lastDigit === 1) {
+            yearWord = "год";
+          } else if (lastDigit >= 2 && lastDigit <= 4) {
+            yearWord = "года";
+          } else {
+            yearWord = "лет";
+          }
+
+          return `${age} ${yearWord}`;
+        } else {
+          return `${age} years old`;
+        }
+      } catch (e) {
+        console.error("Error calculating age:", e);
+        return i18n.currentLanguage === "ru" ? "N/A лет" : "N/A years old";
+      }
     },
   },
   methods: {
