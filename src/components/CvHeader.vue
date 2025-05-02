@@ -3,9 +3,9 @@
     <div class="cv-section-inner">
       <div class="header-left">
         <div class="cv-personal-information">
-          <h2>{{ personalInfo.name }}</h2>
-          <h3>{{ personalInfo.position }}</h3>
-          <h4>{{ age }}, {{ personalInfo.location }}</h4>
+          <h2>{{ displayName }}</h2>
+          <h3>{{ displayPosition }}</h3>
+          <h4>{{ age }}, {{ displayLocation }}</h4>
         </div>
 
         <ul class="cv-contact-info">
@@ -26,7 +26,7 @@
       <div class="header-right">
         <img
           src="@/assets/photo.jpg"
-          :alt="personalInfo.name"
+          :alt="displayName"
           class="profile-photo"
         />
       </div>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { Header, contacts } from "../data/data";
+import { i18n } from "../i18n";
 import moment from "moment";
 
 export default {
@@ -62,16 +62,28 @@ export default {
     };
   },
   computed: {
+    displayName() {
+      return this.header && this.header.name ? this.header.name : "";
+    },
+    displayPosition() {
+      return this.header && this.header.position ? this.header.position : "";
+    },
+    displayLocation() {
+      return this.header && this.header.location ? this.header.location : "";
+    },
     age() {
-      if (!this.personalInfo.yob) return "";
+      if (!this.header || !this.header.yob) return "";
 
-      const birthDate = Date.parse(this.personalInfo.yob);
+      const birthDate = Date.parse(this.header.yob);
       const now = Date.now();
       const years = moment
         .duration((now - birthDate) / 1000, "seconds")
         .years();
 
-      return `${Math.ceil(years)} years old`;
+      // Возвращаем возраст с правильным текстом в зависимости от языка
+      return i18n.currentLanguage === "ru"
+        ? `${Math.ceil(years)} лет`
+        : `${Math.ceil(years)} years old`;
     },
   },
   methods: {
@@ -87,8 +99,7 @@ export default {
     },
 
     initializeData() {
-      this.personalInfo = { ...Header };
-      this.formattedContacts = this.formatContacts(contacts);
+      this.formattedContacts = this.formatContacts(this.contacts);
     },
 
     toggleDropdown() {
@@ -103,7 +114,14 @@ export default {
       return this.summary && this.summary[prop];
     },
   },
-
+  watch: {
+    contacts: {
+      handler() {
+        this.formattedContacts = this.formatContacts(this.contacts);
+      },
+      immediate: true,
+    },
+  },
   mounted() {
     this.$nextTick(this.initializeData);
   },
