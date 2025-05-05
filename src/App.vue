@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-    <my-cv />
+    <router-view />
   </div>
 </template>
 
 <script>
-import MyCv from "./components/MyCv.vue";
-
 export default {
   name: "App",
-  components: {
-    MyCv,
-  },
 };
 </script>
 

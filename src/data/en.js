@@ -66,7 +66,7 @@ export const Experience = [
     location: "Remote",
     position: "Frontend Team Lead",
     start: "May 2022",
-    end: "",
+    end: "December 2024",
     type: "Full-time",
     descriptionHeader:
       "Social Discovery Ventures is a collection of unique online brands which enable people around the globe to discover each other through the power of shared interests and mutual benefit.",

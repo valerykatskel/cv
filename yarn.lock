@@ -4552,6 +4552,7 @@ __metadata:
     sass: "npm:^1.32.13"
     sass-loader: "npm:^10.1.1"
     vue: "npm:^2.6.12"
+    vue-router: "npm:3"
     vue-template-compiler: "npm:^2.6.12"
   languageName: unknown
   linkType: soft
@@ -12766,6 +12767,13 @@ __metadata:
     vue-template-compiler:
       optional: true
   checksum: 10c0/22491414f3743d485cf8d966837314706abf35d330bf055e356d55f16df8d4ab21fb712c7168509f7492d62cdf799aedf8d31df36d89bd5a4479b9f90fa094c1
+  languageName: node
+  linkType: hard
+
+"vue-router@npm:3":
+  version: 3.6.5
+  resolution: "vue-router@npm:3.6.5"
+  checksum: 10c0/f1c81854a7bb943fe78ad1516acc948fffbf71646ee4d568c52c0c680dd4763152d1c317ac240a5066bc24682700b4698bd135d54c2fc7d8cb21d068a99e50ac
   languageName: node
   linkType: hard
 
